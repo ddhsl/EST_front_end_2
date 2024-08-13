@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form2</title>
+</head>
+<body>
+    <select name="" id="language">
+        <optgroup label="프로그래밍언어">
+          <option value="python">python</option>
+          <option value="JS">JS</option>
+          <option value="java">java</option>
+          <option value="c">c</option>
+        </optgroup>
+      </select>
+      <select name="" id="" size="2">
+        <option value="">옵션 선택하기</option>
+        <option value="1" selected>FE</option>
+        <option value="2">BE</option>
+      </select>
+      <hr>
+      <fieldset>
+        <legend>성별</legend>
+        <input type="radio" name="gender" value="male" id="male">
+        <label for="male">남자</label>
+        <input type="radio" name="gender" value="female" id="female">
+        <label for="female">여자</label>
+      </fieldset>
+      <hr>
+      <form action="">
+        <label for="broswers">사용하는 브라우저를 입력하세요</label>
+        <input list="broswers">
+        <datalist id="broswers">  <!--겉보기엔 인풋 텍스트 상자와 비슷하게 보이지만, 입력해보면 자동완성처럼 비슷한 문자를 옵션 내에서 추천해줌-->
+            <option value="chrome"></option>
+            <option value="Firefox"></option>
+            <option value="Safari"></option>
+            <option value="Edge"></option>
+            <option value="IE"></option>
+        </datalist>
+      </form>
+</body>
+</html>

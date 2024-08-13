@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+</head>
+<body>
+    <form action="#" method="post">
+        <label for="id">아이디</label>
+        <input type="text" id="id" name="id">
+        <label for="pw">비밀번호</label>
+        <input type="password" name="pw" id="pw" placeholder="특수문자 포함 필수">
+        <label for="birthDay">생일</label>
+        <input type="date" name="birthDay" id="birthDay">
+        <label for="profile">프로필사진</label>
+        <input type="file" id="profile" name="profile" accept="image.png"/>
+        <select name="mobile" id="mobile">
+            <option value="skt" selected>SKT</option>
+            <option value="lg">LG</option>
+            <option value="kt">KT</option>
+        </select>
+        <label for="contact">연락처</label>
+        <input type="tel" name="contact" id="contact"> <!--연락처는 모바일에서 봤을 때 숫자 키패드가 뜨도록 tel로 설정-->
+        <fieldset>
+            <legend>성별</legend>
+            <input type="radio" name="gender" value="male" id="male">
+            <label for="male">남성</label>
+            <input type="radio" name="gender" value="female" id="female">
+            <label for="female">여성</label>
+        </fieldset>
+        <fieldset>
+            <legend>사용 기술</legend>
+            <input type="checkbox" name="html" id="html">
+            <label for="html">HTML</label>
+            <input type="checkbox" name="css" id="css">
+            <label for="css">CSS</label>
+            <input type="checkbox" name="javaScript" id="javaScript">
+            <label for="javaScript">Java Script</label>
+            <input type="checkbox" name="python" id="python">
+            <label for="python">Python</label>
+            <input type="checkbox" name="django" id="django">
+            <label for="django">django</label>
+        </fieldset>
+            <label for="broswers">사용하는 브라우저를 선택하세요</label>
+            <input list="broswers">
+            <datalist id="broswers">
+                <option value="chrome"></option>
+                <option value="Safari"></option>
+                <option value="Edge"></option>
+            </datalist>
+            <button type="reset">초기화</button>
+            <button type="submit">제출</button>
+    </form>
+</body>
+</html>

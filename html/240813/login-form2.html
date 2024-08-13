@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인 또는 회원가입</title>
+    <style>
+    .sr-only {
+        position:absolute;
+        left:-9999px;
+        top:auto;
+        width:1px;
+        height:1px;
+        overflow:hidden;
+        }
+    </style>
+</head>
+<body> 
+    <section>
+        <h2>로그인 또는 회원가입</h2>
+        <p>위니브에서 여러분의 궁금증을 해결하세요! :) </p>
+            <label for="id" class="sr-only">아이디</label>
+            <input type="text" id="id" name="id" required placeholder="아이디">
+            <label for="pw" class="sr-only"></label>
+            <input type="password" id="pw" name="pw" required placeholder="비밀번호">
+            <label for="login">로그인 상태 유지</label>
+            <input type="checkbox" id="login">
+            <a href="#">로그인</a>
+            <ul>
+                <li><a href="#">회원가입</a></li>
+                <li><a href="#">아이디/비밀번호 찾기</a></li>
+            </ul>
+            <p>또는</p>
+    </section>
+    <section>
+            <a href="#">구글 계정으로 로그인</a>
+            <a href="#">페이스북 계정으로 로그인</a>
+            <a href="#">네이버 계정으로 로그인</a>
+            <a href="#">카카오 계정으로 로그인</a>
+    </section>
+</body>
+</html>
