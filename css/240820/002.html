@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+        }
+        div {
+            width: 100px;
+            height : 100px;
+            background-color: purple;
+            display: flex;
+        }
+        .border1 {
+            border-radius: 50px ; 
+        }
+        .border2 {
+            border-radius: 10px;
+        }
+        .border3 {
+            border-radius: 100% 0 0 0;  /* %기호나 px이나 둘 다 사용 가능*/
+        }
+        .border4 {
+            border-radius: 100% 0 100% 0; /*100% 0도 가능*/
+        }
+        .border5 {
+            border-radius: 0 50%;
+        }
+        .border6 {
+            height: 50px;
+            border-radius: 100px 100px 0 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="border1"></div>
+    <div class="border2"></div>
+    <div class="border3"></div>
+    <div class="border4"></div>
+    <div class="border5"></div>
+    <div class="border6"></div>
+
+    <!--div.box$*6 box1~6이라는 클래스명을 가진 div태그 6개-->
+</body>
+</html>
