@@ -12,30 +12,29 @@
 }
 
 :root {
-    --main-color: #29363d;
-    --sub-color: #5a6a72;
+    --main-color : #29363D;
+    --sub-color : #5A6A72;
 }
 
 body {
     font-family: "Pretendard-Regular", sans-serif;
     color: var(--main-color);
 
-    background-color: #eee;
+    background-color: #EEE;
     padding-top: 30px;
     display: flex;
     justify-content: center;
     gap: 27px;
 }
 
-/* 공통 속성 */
+/*공통 속성*/
 
 article {
     width: 288px;
     border-radius: 8px;
-    box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.1);
     background-color: #fff;
+    box-shadow: 2px 2px 8px 0 rgba(0,0,0,0.1);
 }
-
 .ell2 {
     overflow: hidden;
     display: -webkit-box;
@@ -47,11 +46,11 @@ article {
     font-family: "Pretendard-Bold";
     font-size: 14px;
     text-decoration: underline;
-    width: 70px;  
+    width: 70px; /*어디서 70이 나온 건지 알아보기*/
     padding: 3px 6px;
 }
 
-/* card1 */
+/*card1*/
 
 .card1 {
     height: 348px;
@@ -59,7 +58,7 @@ article {
 
 .card1 img {
     width: 100%;
-    aspect-ratio: 288/196;
+    aspect-ratio: 288 / 196;
     object-fit: cover;
     border-radius: 8px 8px 0 0;
 }
@@ -69,73 +68,75 @@ article {
 }
 
 .card1 h2 {
-    font-family: "Pretendard-Bold";
+    font-family:"Pretendard-Bold"
 }
 
 .card1 .content {
-    margin: 16px 0;
+    margin: 16px 0; /*위에서 text-group에서 padding으로 좌우 16px은 적용된 상태이므로, 여기서 또 할 필요 없음*/
+    color: var(--sub-color);
     font-size: 12px;
     line-height: 19.2px;
-    color: var(--sub-color);
 }
 
-/* card2 */
+/*.card2 */
 
 .card2 {
-    position: relative;
+    position: relative; /*왜 card1과는 달리 height를 지정하지 않냐면, 
+                        자식태그 img를 padding %로 활용할 것이기 때문에, 
+                        부모요소 .card2의 heigth를 0으로 설정해야 한다.(padding으로만 제어하기위해!)*/
 }
 
 .card2 header {
-    height: 68px;
+    height: 68px;     /*header는 title이 차지하는 부분 뿐만 아니라, 위아래 하얀부분(공백)까지 포함한다*/
 }
 
 .card2 header img {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    position: absolute;
-    top: 16px;
+    position: absolute; /*부모요소 .card2를 기준으로 위치를 조정하겠다고 선언*/
+    top: 16px;       
     left: 16px;
 }
 
 .card2 .title {
     position: absolute;
-    top: 16px;
-    right: 16px;
     width: 200px;
-    height: 40px;
+    height: 40px;    /*figma에서 frame5에 해당한다*/ 
+    top: 16px;
+    right: 16px;     /*왜 left가 아니라 right인지 알아보기*/
 }
 
 .card2 h3 {
     font-family: "Pretendard-Bold";
     line-height: 19.2px;
     margin-bottom: 1px;
+
 }
 
-.card2 .title p {
+.card2 .title p{
     font-size: 12px;
     line-height: 14.4px;
     color: var(--sub-color);
 }
 
 .thumbnail {
-    width: 100%;
-    aspect-ratio: 288/196;
+    width: 100%;    /*이미 이미지의 위치가 문서의 흐름에 따라 header아래에 위치해있기 때문에, 위치조정이 필요없다.*/
+    aspect-ratio: 288 / 196;
     object-fit: cover;
 }
 
-.card2 .content {
-    padding: 10px 16px 16px;
+.card2 .content{
+    padding: 10px 16px 16px; /*왜 10 16 12 16이 아닌지 알아보기*/
 }
 
-.card2 .content .ell2 {
+.card2 .content .ell2{
     font-size: 12px;
     line-height: 19.2px;
     color: var(--sub-color);
-    margin-bottom: 12px;
     height: 40px;
+    margin-bottom: 12px;
 }
-
 .card2 .read {
     position: relative;
 }
@@ -158,15 +159,15 @@ article {
 
 .card2 .btn-group {
     position: absolute;
-    right: 16px;
     bottom: 16px;
+    right: 16px;
     height: 32px;
 }
 
 .card2 .btn-group img {
     width: 32px;
     height: 32px;
-    vertical-align: top;
+    vertical-align: top; /*정렬을 도와줌*/
 }
 
 .card2 button:nth-child(2),
