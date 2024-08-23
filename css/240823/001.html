@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            height: 100vh;
+            background-color: gainsboro;
+
+            display: grid;
+            /* 열방향 트랙사이즈 설정*/
+            grid-template-columns: 40% 60%;
+            grid-template-columns: 4fr 6fr; 
+            grid-gap:20px
+
+            
+        }
+
+        .item {
+            padding: 24px;
+            font-size:24px;
+            font-weight: bold;
+        }
+
+        .item:nth-child(odd) {
+            background-color: coral
+        }
+
+        .item:nth-child(even){
+            background-color: cornflowerblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+    </div>
+</body>
+</html>
