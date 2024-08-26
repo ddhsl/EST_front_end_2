@@ -5,49 +5,50 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
         <style>
-            .txt-hide {
-                position: absolute;
-                clip: rect(0 0 0 0);
-                width: 1px;
-                height: 1px;
-                margin: -1px;
-                overflow: hidden;
+            div {
+                width: 500px;
+                border: solid 2px #ddd;
+                padding: 20px;
+                border-radius: 10px;
             }
 
-            .label-hold {
-                position: relative;
+            button {
+                padding: 10px 20px;
+                margin-right: 40px;
             }
 
-            .label-hold::before {
-                content: "";
-                display: inline-block;
-                width: 22px;
-                height: 22px;
-                border: 1px solid black;
-                margin-right: 10px;
-                vertical-align: -5px;
+            button:enabled:hover {
+                background-color: blue;
+                cursor: pointer;
             }
 
-            .label-hold::after {
-                content: "";
-                display: inline-block;
-                width: 22px;
-                height: 22px;
-                background: url(./checkmark.png) 0 0/22px no-repeat;
-
-                position: absolute;
-                top: -3px;
-                left: 0;
-                opacity: 0;
+            button:disabled,
+            input:disabled {
+                background-color: black;
+                cursor: not-allowed;
             }
 
-            .checkbox:checked + .label-hold::after {
-                opacity: 1;
+            button:enabled:active {
+                background-color: red;
+            }
+
+            div:focus-within {
+                background-color: yellow;
             }
         </style>
     </head>
     <body>
-        <input type="checkbox" id="checkbox" class="checkbox txt-hide" />
-        <label for="checkbox" class="label-hold">체크박스</label>
+        <div>
+            <button>눌러보세요!!!!!!!!</button>
+            누르면 배경색 변경
+        </div>
+
+        <div>
+            <input type="text" />
+            <button>enabled</button>
+
+            <input type="text" disabled />
+            <button disabled>disabled</button>
+        </div>
     </body>
 </html>

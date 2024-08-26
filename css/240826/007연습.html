@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+        <style>
+            @keyframes cafe {
+                0% {
+                    background-position: left bottom;
+                }
+                100% {
+                    background-position: right bottom;
+                }
+            }
+
+            .cafe {
+                width: 120px;
+                height: 180px;
+                background-image: url("./image.png");
+                background-size: auto 100%;
+                background-repeat: no-repeat;
+                animation-name: cafe;
+                animation-duration: 5s;
+                animation-timing-function: steps(33);
+                animation-iteration-count: infinite;
+            }
+        </style>
+</head>
+<body>
+    <div class="cafe"></div>
+</body>
+</html>
