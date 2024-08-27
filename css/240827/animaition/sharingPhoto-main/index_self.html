@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습</title>
+    <style>
+        :root {
+            --translateZ: calc((300px * 4) / 3.14 / 2 )
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        @keyframes myFav {
+            to {
+                transform : translate(-50%,-50%) rotateY(1turn);
+        }
+    }
+        div {
+            height: 100vh;
+            perspective: 600px;
+        }
+        .list {
+            position: relative;
+            width: 300px;
+            height: 400px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transform-style: preserve-3d;
+            animation: myFav 6s infinite linear;
+        }
+        .list li {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+        }
+        li img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        li:nth-child(1) {
+            transform: rotateY(0) translateZ(var(--translateZ));
+        }
+        li:nth-child(2) {
+            transform: rotateY(calc(360deg / 4)) translateZ(var(--translateZ));
+        }
+        li:nth-child(3) {
+            transform: rotateY(calc((360deg / 4)*2)) translateZ(var(--translateZ));
+        }
+        li:nth-child(4) {
+            transform: rotateY(calc((360deg / 4)*3)) translateZ(var(--translateZ));
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <ul class="list">
+            <li>
+                <img src="./img/Subject 2.png" alt="쿠로미">
+            </li>
+            <li>
+                <img src="./img/Subject 3.png" alt="마이멜로디">
+            </li>
+            <li>
+                <img src="./img/Subject 4.png" alt="루피">
+            </li>
+            <li>
+                <img src="./img/Subject.png" alt="키티">
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
