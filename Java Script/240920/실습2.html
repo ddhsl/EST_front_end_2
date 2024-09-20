@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요소생성 실습</title>
+</head>
+<body>
+    <input type="text">
+    <button type="submit">+ADD</button>
+    <ul class="list">
+
+    </ul>
+
+    <script>
+        const input = document.querySelector('input');
+        const btn = document.querySelector('button');
+        const list = document.querySelector('.list');
+
+        btn.addEventListener('click', () => {
+            let li = document.createElement('LI')
+            li.textContent = input.value;
+            list.appendChild(li);
+            let button = document.createElement('BUTTON');
+            button.textContent = 'X';
+            button.style.color = 'red';
+            li.appendChild(button);
+        })
+    </script>
+</body>
+</html>

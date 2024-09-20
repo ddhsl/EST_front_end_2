@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <!--배경색 바꾸기-->
+    <div class="container">
+        <h1>Change BODY color</h1>
+        <p id="msg">이전색상 : ?</p>
+        <input type="color" id="color">
+        <input type="text" id="input" name="color" placeholder="input">
+        <button type="button" id="btn">CHANGE!</button>
+    </div>
+
+    <script>
+        const input = document.getElementById("input");
+        const btn = document.getElementById("btn");
+        const color = document.getElementById("color");
+        let prevColor = '';
+
+        btn.addEventListener('click',  () => {
+            const curColor = input.value;
+            document.body.style.backgroundColor = curColor;
+            msg.innerHTML = `이전색상은 : ${prevColor}, 현재색상은 : ${curColor}`
+            prevColor = curColor;
+        })
+    </script>
+</body>
+</html>

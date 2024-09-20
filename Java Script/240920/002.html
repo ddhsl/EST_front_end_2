@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="../240919/changeImg_start/images/bat.jpg" alt="halloween bat">
+    <button type="button" id="btn">이미지 정보</button>
+    <button type="button" id="btn2">마녀이지미로 바꾸기</button>
+    <dl>
+        <dt>이미지 경로</dt>
+        <dd class="img-url"></dd>
+        <dt>이미지 대체텍스트</dt>
+        <dd class="img-alt"></dd>
+    </dl>
+
+    <script>
+        const img = document.querySelector('img');
+        const btn = document.getElementById('btn');
+        btn.addEventListener('click', () => {
+            document.querySelector('.img-url').textContent = img.src;
+            document.querySelector('.img-alt').textContent = img.alt;
+        })
+
+        btn2.addEventListener('click', () => {
+            img.setAttribute('src', '../240919/changeImg_start/images/witch.jpg');
+        })
+    </script>
+</body>
+</html>

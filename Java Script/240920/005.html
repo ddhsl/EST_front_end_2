@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <form name="text">
+        <input type="text" name="user">
+        <p id="msg"></p>
+        <div class="btn-area">
+            <button type="reset">다시쓰기</button>
+            <button type="submit">완료</button>
+        </div>
+    </form>
+
+    <script>
+        const fm = document.forms.myForm;
+        fm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            msg.textcontent = fm.user.value;
+        })
+    </script>
+</body>
+</html>
