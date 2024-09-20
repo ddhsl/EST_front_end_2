@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>modal</title>
+    <style>
+        .modal {
+            background-color: green;
+            width: 300px;
+            height: 300px;
+            border-radius: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: none;
+        }
+
+        .modal button {
+            position: absolute;
+            top: 5%;
+            right: 5%;
+        }
+
+        .modal p {
+            font-size: 30px;
+            color: white;
+        }
+
+        .vew {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <button class="open">OPEN</button>
+    <div class="modal">
+        <p>modal</p>
+        <button>X</button>
+    </div>
+
+    <script>
+        const open = document.querySelector(".open");
+        const modal = document.querySelector(".modal");
+        const closeModal = document.querySelector(".modal button");
+
+        open.addEventListener("click", () => {
+            modal.classList.add("vew");
+        });
+
+        closeModal.addEventListener("click", () => {
+            modal.classList.remove("vew");
+        });
+        </script>
+    </body>
+</html>
