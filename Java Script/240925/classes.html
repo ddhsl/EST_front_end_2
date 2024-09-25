@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Parent {
+            constructor(){
+                this.name = '예원'
+            }
+
+            sayName() {
+                console.log(this.name);
+            }
+        }
+         //상속받기 - extends 키워드만 넣어주면 상속 가능해짐, 자식에 속성까지 상속시키려면 super키워드로 사용
+        class Child extends Parent {
+            constructor() {
+            super();
+            this.myName = '안녕';
+        }
+
+        //오버라이팅 - 덮어쓰기 - 즉, 부모의 sayName 메소드값 '예원'이 아닌, myName 값 '안녕'을 출력
+        sayName () {
+            console.log(this.myName);
+        }
+        }
+    
+
+        const newChild = new Child();
+    </script>
+</body>
+</html>
